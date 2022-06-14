@@ -26,12 +26,12 @@ class="border-b-2 pb-2 border-dotted italic text-gray-500">
 
     {{-- gör att vi kommer i på det id vi vill göra en edit på --}}
 <a
- href="cars/{{ $car->id }}/edit"
+ href="posts/{{ $post->id }}/edit"
  class="border-b-2 pb-2 border-dotted italic text-green-500">
 Edit &rarr;
 </a>
 
-<form action="/cars/{{ $car->id }}" class="pt-3"
+<form action="/posts/{{ $post->id }}" class="pt-3"
    method="POST">
 @csrf
 
@@ -44,16 +44,16 @@ Delete &rarr;
 </form>
   </div>
     <span class="uppercase text-blue-500 font-bold text-sm italic">
-      Founded:{{ $car->founded }}
+      Founded:{{ $post->founded }}
 
     </span>
     <h2 class="text-gray-700 text-5xl hover:text-gray-500">
-<a href="/cars/{{ $car->id }}">
-{{ $car->name }}
+<a href="/cars/{{ $post->id }}">
+{{ $post->name }}
 </a>
     </h2>
     <p class="text-lg text-gray-700 py-6">
-{{ $car->description }}
+{{ $post->description }}
     </p>
     <hr class="mt-4 mb-8">
 </div>

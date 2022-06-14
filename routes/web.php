@@ -15,9 +15,9 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('posts.index');
+    return redirect ('posts');
 });
 
 Route::resource('/posts', PostsController::class);
 Route::resource('/category', CategoryController::class);
-// Route::get('/category/{id}', [CategoryController::class, 'show']);
+ Route::get('/category/{id}', [CategoryController::class, 'show']);
